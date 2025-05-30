@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ShapetoGeoJSONDockWidgetBase</class>
+ <widget class="QDockWidget" name="ShapetoGeoJSONDockWidgetBase">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>300</width>
+    <height>250</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Shape a GeoJSON</string>
+  </property>
+  <widget class="QWidget" name="dockWidgetContents">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    
+    <!-- Cargar Shapefile -->
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>Archivo Shapefile</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QgsFileWidget" name="qfw_cargar"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_cargar">
+      <property name="text">
+       <string>Cargar Shapefile</string>
+      </property>
+     </widget>
+    </item>
+
+    <!-- Exportar GeoJSON -->
+    <item>
+     <widget class="QPushButton" name="btn_exportar">
+      <property name="text">
+       <string>Exportar a GeoJSON</string>
+      </property>
+     </widget>
+    </item>
+
+    <!-- Corte -->
+    <item>
+     <widget class="QLabel" name="label_corte">
+      <property name="text">
+       <string>Realizar Corte entre Shapefiles</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QgsFileWidget" name="qfw_corte1"/>
+    </item>
+    <item>
+     <widget class="QgsFileWidget" name="qfw_corte2"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_corte">
+      <property name="text">
+       <string>Realizar Corte</string>
+      </property>
+     </widget>
+    </item>
+
+    <!-- Crear Polígono desde CSV -->
+    <item>
+     <widget class="QLabel" name="label_csv">
+      <property name="text">
+       <string>Crear Polígono desde CSV</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QgsFileWidget" name="qfw_csv"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="btn_crear_poligono">
+      <property name="text">
+       <string>Crear Polígono</string>
+      </property>
+     </widget>
+    </item>
+
+   </layout>
+  </widget>
+ </widget>
+
+ <customwidgets>
+  <customwidget>
+   <class>QgsFileWidget</class>
+   <extends>QWidget</extends>
+   <header>qgsfilewidget.h</header>
+  </customwidget>
+ </customwidgets>
+
+ <resources/>
+ <connections/>
+</ui>
